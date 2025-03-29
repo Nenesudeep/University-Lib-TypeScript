@@ -8,7 +8,7 @@ import Image from 'next/image';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { Session } from 'next-auth';
 
-const Header = ({session}:{session:Session}) => {
+const Header = ({ session }: { session: Session }) => {
     const pathname = usePathname();
 
     return (
@@ -33,7 +33,7 @@ const Header = ({session}:{session:Session}) => {
                 <li>
                     <Link href={'/my-profile'}>
                         <Avatar>
-                            <AvatarFallback className='text-black bg-amber-100'>
+                            <AvatarFallback className="text-black bg-amber-100">
                                 {getInitials(session.user?.name || 'IN')}
                             </AvatarFallback>
                         </Avatar>

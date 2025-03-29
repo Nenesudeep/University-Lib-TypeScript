@@ -13,7 +13,11 @@ const Home = async () => {
         <>
             <BookOverview {...sampleBooks[0]} isLoanedBook={false} />
 
-            <BookList title="Latest books" books={sampleBooks.map(book => ({...book, isLoanedBook: false}))} containerClassName="mt-28" />
+            <BookList
+                title="Latest books"
+                books={sampleBooks.map((book) => ({ ...book, isLoanedBook: false }))}
+                containerClassName="mt-28"
+            />
         </>
     );
 };
